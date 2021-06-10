@@ -13,7 +13,6 @@
     <a href="https://github.com/botcity-dev/bot-python-template/blob/main/.github/SUPPORT.md">Support</a>
   </p>
 </p>
-
 <br>
 
 # Prerequisites
