@@ -9,6 +9,7 @@ nav:
     - Exploring the Project: project.md
     - Building the Package: building.md
     - Running your Code: running.md
+    - Next Steps: next.md
 
 theme:
   icon:
