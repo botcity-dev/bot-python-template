@@ -1,2 +1,2 @@
-botcity-framework-core
+botcity-framework-core>=0.1.1
 botcity-maestro-sdk

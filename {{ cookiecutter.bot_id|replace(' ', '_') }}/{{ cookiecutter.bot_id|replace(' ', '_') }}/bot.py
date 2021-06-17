@@ -9,6 +9,10 @@ class Bot(DesktopBot):
         # add an image for search
         # self.add_image("start", self.get_resource_abspath("start.png"))
 
+        # Fetch the Activity ID from the task:
+        # task = self.maestro.get_task(execution.task_id)
+        # activity_id = task.activity_id
+
         # Post an artifact into BotMaestro
         # self.maestro.post_artifact(
         #     execution.task_id, "artifact_name", "artifact_path.xlsx"
