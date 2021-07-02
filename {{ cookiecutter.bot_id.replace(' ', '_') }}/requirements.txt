@@ -1,2 +1,6 @@
+{%- if cookiecutter.project_type == "Desktop" -%}
 botcity-framework-core>=0.1.1
+{%- elif cookiecutter.project_type == "Web" -%}
+botcity-framework-web
+{% endif %}
 botcity-maestro-sdk

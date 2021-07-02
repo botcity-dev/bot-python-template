@@ -1,8 +1,11 @@
-from botcity.core import DesktopBot
+from botcity.web import WebBot
 
 
-class Bot(DesktopBot):
+class Bot(WebBot):
     def action(self, execution):
+        # Configure whether or not to run on headless mode
+        self.headless = False
+
         # add an image for search
         # self.add_image("start", self.get_resource_abspath("start.png"))
 
@@ -17,6 +20,9 @@ class Bot(DesktopBot):
         # self.maestro.post_artifact(
         #     execution.task_id, "artifact_name", "artifact_path.xlsx"
         # )
+
+        # Stop the browser and clean up
+        self.stop_browser()
 
     def not_found(self, label):
         print(f"Element not found: {label}")
