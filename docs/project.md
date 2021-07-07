@@ -56,10 +56,11 @@ class Bot(DesktopBot):
 This template project contains a skeleton class under `bot.py` with an initial example
 which opens up the browser with the BotCity website.
 
-The base class, `DesktopBot`, contains all the functions of the BotCity Python Core Framework
+Depending on your selection of the Project Type, the template will either use as base class the `DesktopBot` or `WebBot`.
+In both cases, the base class contains all the functions of the BotCity Python Core Framework
 as methods so please keep in mind to use `self.` when invoking the methods.
 
-
+### Example of a Desktop Bot skeleton:
 ```python
 class Bot(DesktopBot):
     def action(self, execution):
@@ -72,6 +73,28 @@ class Bot(DesktopBot):
         # using enter from keyboard module
         self.enter()
 ```
+
+### Example of a Web Bot skeleton:
+```python
+class Bot(WebBot):
+    def action(self, execution):
+        # Configure whether or not to run on headless mode
+        self.headless = False
+
+        # using browse from browser module
+        self.browse(...)
+        # using find from display module
+        self.find(...)
+        # using mouse_move from mouse module
+        self.mouse_move(x=100, y=200)
+        # using enter from keyboard module
+        self.enter()
+
+        # Stop the browser and clean up
+        self.stop_browser()
+
+```
+
 
 !!! warning
     In case you use a different module for your main bot (instead of the default `bot.py`),
