@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -297,6 +297,26 @@
     Bot Code
   </a>
   
+    <nav class="md-nav" aria-label="Bot Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-desktop-bot-skeleton" class="md-nav__link">
+    Example of a Desktop Bot skeleton:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-web-bot-skeleton" class="md-nav__link">
+    Example of a Web Bot skeleton:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -389,6 +409,26 @@
     Bot Code
   </a>
   
+    <nav class="md-nav" aria-label="Bot Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-desktop-bot-skeleton" class="md-nav__link">
+    Example of a Desktop Bot skeleton:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-web-bot-skeleton" class="md-nav__link">
+    Example of a Web Bot skeleton:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -460,8 +500,10 @@ under <code>package_data</code> at <code>setup.py</code>. </p>
 <h2 id="bot-code">Bot Code</h2>
 <p>This template project contains a skeleton class under <code>bot.py</code> with an initial example
 which opens up the browser with the BotCity website.</p>
-<p>The base class, <code>DesktopBot</code>, contains all the functions of the BotCity Python Core Framework
+<p>Depending on your selection of the Project Type, the template will either use as base class the <code>DesktopBot</code> or <code>WebBot</code>.
+In both cases, the base class contains all the functions of the BotCity Python Core Framework
 as methods so please keep in mind to use <code>self.</code> when invoking the methods.</p>
+<h3 id="example-of-a-desktop-bot-skeleton">Example of a Desktop Bot skeleton:</h3>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Bot</span><span class="p">(</span><span class="n">DesktopBot</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">execution</span><span class="p">):</span>
         <span class="c1"># using browse from browser module</span>
@@ -472,6 +514,24 @@ as methods so please keep in mind to use <code>self.</code> when invoking the me
         <span class="bp">self</span><span class="o">.</span><span class="n">mouse_move</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
         <span class="c1"># using enter from keyboard module</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">enter</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="example-of-a-web-bot-skeleton">Example of a Web Bot skeleton:</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Bot</span><span class="p">(</span><span class="n">WebBot</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">execution</span><span class="p">):</span>
+        <span class="c1"># Configure whether or not to run on headless mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">headless</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># using browse from browser module</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">browse</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="c1"># using find from display module</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="c1"># using mouse_move from mouse module</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mouse_move</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+        <span class="c1"># using enter from keyboard module</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enter</span><span class="p">()</span>
+
+        <span class="c1"># Stop the browser and clean up</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_browser</span><span class="p">()</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -572,10 +632,10 @@ make sure to change the <code>__main__.py</code> file to load the proper module.
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
