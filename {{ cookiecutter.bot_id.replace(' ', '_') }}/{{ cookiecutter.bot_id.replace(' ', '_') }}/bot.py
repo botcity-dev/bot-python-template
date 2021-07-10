@@ -11,7 +11,7 @@ class Bot(DesktopBot):
         # activity_id = task.activity_id
 
         # Opens the BotCity website.
-        self.browse("https://botcity.dev/en")
+        self.browse("https://botcity.dev")
 
         # Post an artifact into BotMaestro
         # self.maestro.post_artifact(
