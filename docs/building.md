@@ -22,7 +22,7 @@ pip install dist/botPython-1.0.tar.gz   # or .zip if running on Windows
 Or simply using the following command:
 
 ```shell
-pip install .
+pip install -e .
 ```
 
 !!! tip

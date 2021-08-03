@@ -6,5 +6,5 @@ This project assumes that you have [Python](https://www.python.org/) as well as 
 
 Here is how to install cookiecutter:
 ```bash
-python3 -m pip install --upgrade cookiecutter
+python -m pip install --upgrade cookiecutter
 ```
