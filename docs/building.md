@@ -33,11 +33,11 @@ pip install -e .
 
     ```shell
     # For deploy:
-    botCLI bot deploy -botId "botPython" -version 1.0 -file "./dist/botPython-1.0.tar.gz" -python
+    java -jar botCLI.jar bot deploy -botId "botPython" -version 1.0 -file "./dist/botPython-1.0.tar.gz" -python
 
     # For update of an existing version file:
-    botCLI bot update -botId "botPython" -version 1.0 -file "./dist/botPython-1.0.tar.gz" -python
+    java -jar botCLI.jar bot update -botId "botPython" -version 1.0 -file "./dist/botPython-1.0.tar.gz" -python
 
     # For release:
-    botCLI bot release -botId "botPython" -version 1.0
+    java -jar botCLI.jar bot release -botId "botPython" -version 1.0
     ```
