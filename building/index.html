@@ -373,13 +373,13 @@ your package into a virtual environment for execution in your automation machine
 All you need to do is use the BotCLI command line interface to deploy and release your
 package.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># For deploy:</span>
-botCLI bot deploy -botId <span class="s2">&quot;botPython&quot;</span> -version <span class="m">1</span>.0 -file <span class="s2">&quot;./dist/botPython-1.0.tar.gz&quot;</span> -python
+java -jar botCLI.jar bot deploy -botId <span class="s2">&quot;botPython&quot;</span> -version <span class="m">1</span>.0 -file <span class="s2">&quot;./dist/botPython-1.0.tar.gz&quot;</span> -python
 
 <span class="c1"># For update of an existing version file:</span>
-botCLI bot update -botId <span class="s2">&quot;botPython&quot;</span> -version <span class="m">1</span>.0 -file <span class="s2">&quot;./dist/botPython-1.0.tar.gz&quot;</span> -python
+java -jar botCLI.jar bot update -botId <span class="s2">&quot;botPython&quot;</span> -version <span class="m">1</span>.0 -file <span class="s2">&quot;./dist/botPython-1.0.tar.gz&quot;</span> -python
 
 <span class="c1"># For release:</span>
-botCLI bot release -botId <span class="s2">&quot;botPython&quot;</span> -version <span class="m">1</span>.0
+java -jar botCLI.jar bot release -botId <span class="s2">&quot;botPython&quot;</span> -version <span class="m">1</span>.0
 </code></pre></div>
 </div>
                 
