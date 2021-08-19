@@ -20,7 +20,7 @@ class Bot(WebBot):
         # activity_id = task.activity_id
 
         # Opens the BotCity website.
-        self.browse("https://www.botcity.dev/en")
+        self.browse("https://www.botcity.dev")
 
         # Uncomment to mark this task as finished on BotMaestro
         # self.maestro.finish_task(
