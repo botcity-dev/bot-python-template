@@ -1,21 +1,23 @@
 from botcity.core import DesktopBot
+# Uncomment the line below for integrations with BotMaestro
+# Using the Maestro SDK
+# from botcity.maestro import *
 
 
 class Bot(DesktopBot):
-    def action(self, execution):
-        # add an image for search
-        # self.add_image("start", self.get_resource_abspath("start.png"))
-
+    def action(self, execution=None):
         # Fetch the Activity ID from the task:
         # task = self.maestro.get_task(execution.task_id)
         # activity_id = task.activity_id
 
         # Opens the BotCity website.
-        self.browse("http://botcity.dev")
+        self.browse("http://www.botcity.dev")
 
-        # Post an artifact into BotMaestro
-        # self.maestro.post_artifact(
-        #     execution.task_id, "artifact_name", "artifact_path.xlsx"
+        # Uncomment to mark this task as finished on BotMaestro
+        # self.maestro.finish_task(
+        #     task_id=execution.task_id,
+        #     status=AutomationTaskFinishStatus.SUCCESS,
+        #     message="Task Finished OK."
         # )
 
     def not_found(self, label):
