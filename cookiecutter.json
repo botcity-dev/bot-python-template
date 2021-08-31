@@ -1,5 +1,5 @@
 {
-    "project_type": ["Desktop", "Web"],
+    "project_type": ["Desktop", "Web", "Both"],
     "bot_id": "botPython",
     "project_name": "Python Bot",
     "project_short_description": "Python package for a BotCity bot."
