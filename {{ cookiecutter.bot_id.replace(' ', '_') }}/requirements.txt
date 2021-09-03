@@ -1,9 +1,9 @@
 {%- if cookiecutter.project_type == "Desktop" -%}
 botcity-framework-core>=0.2.4
 {%- elif cookiecutter.project_type == "Web" -%}
-botcity-framework-web>=0.1.1
+botcity-framework-web>=0.1.4
 {%- elif cookiecutter.project_type == "Both" -%}
 botcity-framework-core>=0.2.4
-botcity-framework-web>=0.1.1
+botcity-framework-web>=0.1.4
 {% endif %}
 botcity-maestro-sdk>=0.1.2
