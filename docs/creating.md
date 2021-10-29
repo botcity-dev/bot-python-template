@@ -10,8 +10,11 @@ When running this command you will be prompted for the following information:
     **bot_id** value **must** match the Bot label configured on BotMaestro if using the integration.
 
 - **project_type**: This will define which bot template is generated.
-    The options are Desktop or Web. Select Web if your automation involve only websites otherwise pick
-    Desktop.
+    The options are **Desktop**, **Web**, **Both** or **Custom**.
+    - Select **Desktop** for general Desktop or non-headless Web automations.
+    - Select **Web** if your automation involve only websites.
+    - Select **Both** if your automation involves a mix.
+    - Select **Custom** if you would like to add your own libraries or create an automation using only BotCity plugins.
 
 - **bot_id**: This will be the name of your Python module.
 

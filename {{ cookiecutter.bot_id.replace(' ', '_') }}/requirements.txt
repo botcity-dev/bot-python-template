@@ -5,5 +5,11 @@ botcity-framework-web>=0.1.6
 {%- elif cookiecutter.project_type == "Both" -%}
 botcity-framework-core>=0.2.4
 botcity-framework-web>=0.1.6
+{%- elif cookiecutter.project_type == "Custom" -%}
+botcity-framework-base
 {% endif %}
 botcity-maestro-sdk>=0.1.2
+# Uncomment to use botcity-utils
+#botcity-utils
+# Uncomment to use botcity-crawler-plugin
+#botcity-crawler-plugin

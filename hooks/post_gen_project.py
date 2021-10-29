@@ -3,9 +3,10 @@ import os
 project_type = "{{cookiecutter.project_type | lower}}"
 
 proj_files = {
-    "desktop": {"remove": ["webbot.py", "bothbot.py"], "use": None},
-    "web": {"remove": ["bot.py", "bothbot.py"], "use": "webbot.py"},
-    "both": {"remove": ["bot.py", "webbot.py"], "use": "bothbot.py"}
+    "desktop": {"remove": ["webbot.py", "bothbot.py", "custombot.py"], "use": None},
+    "web": {"remove": ["bot.py", "bothbot.py", "custombot.py"], "use": "webbot.py"},
+    "both": {"remove": ["bot.py", "webbot.py", "custombot.py"], "use": "bothbot.py"},
+    "custom": {"remove": ["bot.py", "webbot.py", "bothbot.py"], "use": "custombot.py"}
 }
 
 config = proj_files.get(project_type)
