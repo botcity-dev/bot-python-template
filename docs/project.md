@@ -29,7 +29,7 @@ It is recommended to use versions in the format X.Y. E.g. 1.0, 1.1, 2.5, 3.10.
 
 ## Resources
 
-By default this project is configured to add into the package all files and subfolders that 
+By default this project is configured to add into the package all files and subfolders that
 are added under the `resources` folder.
 
 The bot base class offers an utility method to handle files taking into consideration the package path.
@@ -40,7 +40,7 @@ Here is an example:
 ```python
 class Bot(DesktopBot):
     def action(self, execution):
-        # Add the resource start.png. 
+        # Add the resource start.png.
         # Note the self.get_resource_abspath call to handle
         # the package path
         self.add_image("start", self.get_resource_abspath("start.png"))
@@ -49,7 +49,13 @@ class Bot(DesktopBot):
 !!! warning
     If adding **new** resource folders parallel to the existing `resources` folder,
     make sure to change the `MANIFEST.in` file and also add the folder name
-    under `package_data` at `setup.py`. 
+    under `package_data` at `setup.py`.
+
+## Additional Dependencies
+
+If you need to add additional Python packages for use with your bot project, make sure to add them into the `requirements.txt`.
+
+This is required for the BotRunner to be able to install and run your bot.
 
 ## Bot Code
 
@@ -98,4 +104,4 @@ class Bot(WebBot):
 
 !!! warning
     In case you use a different module for your main bot (instead of the default `bot.py`),
-    make sure to change the `__main__.py` file to load the proper module. 
+    make sure to change the `__main__.py` file to load the proper module.

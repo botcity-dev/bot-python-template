@@ -16,7 +16,7 @@ When running this command you will be prompted for the following information:
     - Select **Both** if your automation involves a mix.
     - Select **Custom** if you would like to add your own libraries or create an automation using only BotCity plugins.
 
-- **bot_id**: This will be the name of your Python module.
+- **bot_id**: This will be the name of your Python module. It can only contain letters (a-z or A-Z), underscore (_) and must end with a letter (a-z or A-Z).
 
 - **project_name**: This is the name of the project. You can pick any name you would like.
 
