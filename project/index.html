@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.5">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.cdeb8541.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -315,6 +315,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#additional-dependencies" class="md-nav__link">
+    Additional Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bot-code" class="md-nav__link">
     Bot Code
   </a>
@@ -429,6 +436,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#additional-dependencies" class="md-nav__link">
+    Additional Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bot-code" class="md-nav__link">
     Bot Code
   </a>
@@ -503,14 +517,14 @@ It is recommended to use versions in the format X.Y. E.g. 1.0, 1.1, 2.5, 3.10.</
 </li>
 </ul>
 <h2 id="resources">Resources</h2>
-<p>By default this project is configured to add into the package all files and subfolders that 
+<p>By default this project is configured to add into the package all files and subfolders that
 are added under the <code>resources</code> folder.</p>
 <p>The bot base class offers an utility method to handle files taking into consideration the package path.
 Please refer to the BotCity Framework documentation under the Bot API for the <code>get_resource_abspath</code> method.</p>
 <p>Here is an example:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Bot</span><span class="p">(</span><span class="n">DesktopBot</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">execution</span><span class="p">):</span>
-        <span class="c1"># Add the resource start.png. </span>
+        <span class="c1"># Add the resource start.png.</span>
         <span class="c1"># Note the self.get_resource_abspath call to handle</span>
         <span class="c1"># the package path</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_resource_abspath</span><span class="p">(</span><span class="s2">&quot;start.png&quot;</span><span class="p">))</span>
@@ -519,8 +533,11 @@ Please refer to the BotCity Framework documentation under the Bot API for the <c
 <p class="admonition-title">Warning</p>
 <p>If adding <strong>new</strong> resource folders parallel to the existing <code>resources</code> folder,
 make sure to change the <code>MANIFEST.in</code> file and also add the folder name
-under <code>package_data</code> at <code>setup.py</code>. </p>
+under <code>package_data</code> at <code>setup.py</code>.</p>
 </div>
+<h2 id="additional-dependencies">Additional Dependencies</h2>
+<p>If you need to add additional Python packages for use with your bot project, make sure to add them into the <code>requirements.txt</code>.</p>
+<p>This is required for the BotRunner to be able to install and run your bot.</p>
 <h2 id="bot-code">Bot Code</h2>
 <p>This template project contains a skeleton class under <code>bot.py</code> with an initial example
 which opens up the browser with the BotCity website.</p>
@@ -560,7 +577,7 @@ as methods so please keep in mind to use <code>self.</code> when invoking the me
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In case you use a different module for your main bot (instead of the default <code>bot.py</code>),
-make sure to change the <code>__main__.py</code> file to load the proper module. </p>
+make sure to change the <code>__main__.py</code> file to load the proper module.</p>
 </div>
                 
               
@@ -654,10 +671,10 @@ make sure to change the <code>__main__.py</code> file to load the proper module.
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
