@@ -1,6 +1,6 @@
 # Dependencies
 
-This project assumes that you have [Python](https://www.python.org/) as well as [pip](https://pip.pypa.io/en/stable/) and [Git](https://git-scm.com/) installed.
+This project assumes that you have [Python](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/) installed.
 
 ## Cookiecutter
 

@@ -1,7 +1,7 @@
 # Creating a new Project using Cookiecutter
 
 ```bash
-python -m cookiecutter https://github.com/botcity-dev/bot-python-template
+python -m cookiecutter https://github.com/botcity-dev/bot-python-template/archive/main.zip
 ```
 
 When running this command you will be prompted for the following information:
