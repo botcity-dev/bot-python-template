@@ -1,0 +1,1 @@
+{"name":"{{ cookiecutter.bot_id.replace(' ', '_') }}","sourceDirPath":"/{{ cookiecutter.bot_id.replace(' ', '_') }}/","resourceDirPath":"/{{ cookiecutter.bot_id.replace(' ', '_') }}/resources/","sourceDirRelative":true,"resourceDirRelative":true}
