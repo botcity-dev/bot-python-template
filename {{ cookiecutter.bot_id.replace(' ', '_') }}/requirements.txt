@@ -1,10 +1,10 @@
 {%- if cookiecutter.project_type == "Desktop" -%}
-botcity-framework-core>=0.2.9,<1.0
+botcity-framework-core>=0.3.0,<1.0
 {%- elif cookiecutter.project_type == "Web" -%}
-botcity-framework-web>=0.5.2,<1.0
+botcity-framework-web>=0.6.0,<1.0
 {%- elif cookiecutter.project_type == "Both" -%}
-botcity-framework-core>=0.2.9,<1.0
-botcity-framework-web>=0.5.2,<1.0
+botcity-framework-core>=0.3.0,<1.0
+botcity-framework-web>=0.6.0,<1.0
 {%- elif cookiecutter.project_type == "Custom" -%}
 botcity-framework-base
 {% endif %}
