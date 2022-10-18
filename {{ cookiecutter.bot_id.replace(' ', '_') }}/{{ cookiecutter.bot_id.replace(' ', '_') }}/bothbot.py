@@ -29,6 +29,10 @@ from botcity.core import DesktopBot
 
 class Bot(WebBot):
     def action(self, execution=None):
+        # Uncomment to silence Maestro errors when disconnected
+        # if self.maestro:
+        #     self.maestro.RAISE_NOT_CONNECTED = False
+
         # Configure whether or not to run on headless mode
         self.headless = False
 

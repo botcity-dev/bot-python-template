@@ -28,6 +28,10 @@ from botcity.base import BaseBot
 
 class Bot(BaseBot):
     def action(self, execution=None):
+        # Uncomment to silence Maestro errors when disconnected
+        # if self.maestro:
+        #     self.maestro.RAISE_NOT_CONNECTED = False
+
         # Fetch the Activity ID from the task:
         # task = self.maestro.get_task(execution.task_id)
         # activity_id = task.activity_id
