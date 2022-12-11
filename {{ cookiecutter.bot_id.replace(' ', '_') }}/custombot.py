@@ -20,27 +20,29 @@ To fix this, you can either:
 Please refer to the documentation for more information at https://documentation.botcity.dev/
 """
 
-from botcity.base import BaseBot
-# Uncomment the line below for integrations with BotMaestro
-# Using the Maestro SDK
-# from botcity.maestro import *
+# Import for integration with BotCity Maestro SDK
+from botcity.maestro import *
+
+# Disable errors if we are not connected to Maestro
+BotMaestroSDK.RAISE_NOT_CONNECTED = False
 
 
-class Bot(BaseBot):
-    def action(self, execution=None):
-        # Fetch the Activity ID from the task:
-        # task = self.maestro.get_task(execution.task_id)
-        # activity_id = task.activity_id
+def main():
+    # Runner passes the server url, the id of the task being executed,
+    # the access token and the parameters that this task receives (when applicable).
+    maestro = BotMaestroSDK.from_sys_args()
+    ## Fetch the BotExecution with details from the task, including parameters
+    execution = maestro.get_execution()
 
-        ...
+    ...
 
-        # Uncomment to mark this task as finished on BotMaestro
-        # self.maestro.finish_task(
-        #     task_id=execution.task_id,
-        #     status=AutomationTaskFinishStatus.SUCCESS,
-        #     message="Task Finished OK."
-        # )
+    # Uncomment to mark this task as finished on BotMaestro
+    # maestro.finish_task(
+    #     task_id=execution.task_id,
+    #     status=AutomationTaskFinishStatus.SUCCESS,
+    #     message="Task Finished OK."
+    # )
 
 
 if __name__ == '__main__':
-    Bot.main()
+    main()
