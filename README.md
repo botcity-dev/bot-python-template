@@ -1,7 +1,6 @@
 <p align="center">
   <h1 align="center">Template Bot Project - Python</h1>
   <p align="center">
-    <strong>« Explore Project <a href="https://botcity-dev.github.io/bot-python-template/">docs</a> »</strong>
     <br>
     <br>
     <a href="https://github.com/botcity-dev/bot-python-template/issues/new?template=bug-report.md">Report bug</a>
@@ -21,7 +20,7 @@
 
 # Getting Started
 
-This repository contains a cookiecutter template for generating a Bot using 
+This repository contains a cookiecutter template for generating a Bot using
 BotCity's Python Framework.
 
 To create a templated project all you need to do is:
@@ -43,8 +42,3 @@ mkdocs build
 
 This will generate the HTML documentation in the `<>/site`
 folder. Look for the `index.html` file and open it with your browser.
-
-# Online Documentation
-
-More information about cookiecutter and how to organize your Bot project can be found
-at https://botcity-dev.github.io/bot-python-template/.

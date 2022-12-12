@@ -1,5 +1,0 @@
-mkdocs
-mkdocstrings
-mkdocs-material
-livereload
-pygments
