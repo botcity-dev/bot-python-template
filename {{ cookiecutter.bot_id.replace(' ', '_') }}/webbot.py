@@ -52,6 +52,14 @@ def main():
     # Opens the BotCity website.
     bot.browse("https://www.botcity.dev")
 
+    # Wait 3 seconds before closing
+    bot.wait(3000)
+
+    # Finish and clean up the Web Browser
+    # You MUST invoke the stop_browser to avoid
+    # leaving instances of the webdriver open
+    bot.stop_browser()
+
     # Uncomment to mark this task as finished on BotMaestro
     # maestro.finish_task(
     #     task_id=execution.task_id,
