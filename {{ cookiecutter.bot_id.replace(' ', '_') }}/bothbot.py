@@ -40,6 +40,9 @@ def main():
     ## Fetch the BotExecution with details from the task, including parameters
     execution = maestro.get_execution()
 
+    print(f"Task ID is: {execution.task_id}")
+    print(f"Task Parameters are: {execution.parameters}")
+
     desktop_bot = DesktopBot()
 
     # Execute operations with the DesktopBot as desired
@@ -61,8 +64,11 @@ def main():
     # Opens the BotCity website.
     webbot.browse("https://www.botcity.dev")
 
+    # Implement here your logic...
+    ...
+
     # Wait 3 seconds before closing
-    bot.wait(3000)
+    webbot.wait(3000)
 
     # Finish and clean up the Web Browser
     # You MUST invoke the stop_browser to avoid

@@ -38,6 +38,9 @@ def main():
     ## Fetch the BotExecution with details from the task, including parameters
     execution = maestro.get_execution()
 
+    print(f"Task ID is: {execution.task_id}")
+    print(f"Task Parameters are: {execution.parameters}")
+
     bot = WebBot()
 
     # Configure whether or not to run on headless mode
@@ -51,6 +54,9 @@ def main():
 
     # Opens the BotCity website.
     bot.browse("https://www.botcity.dev")
+
+    # Implement here your logic...
+    ...
 
     # Wait 3 seconds before closing
     bot.wait(3000)

@@ -36,8 +36,14 @@ def main():
     ## Fetch the BotExecution with details from the task, including parameters
     execution = maestro.get_execution()
 
+    print(f"Task ID is: {execution.task_id}")
+    print(f"Task Parameters are: {execution.parameters}")
+
     bot = DesktopBot()
     bot.browse("http://www.botcity.dev")
+
+    # Implement here your logic...
+    ...
 
     # Uncomment to mark this task as finished on BotMaestro
     # maestro.finish_task(
