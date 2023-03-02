@@ -14,8 +14,8 @@ ModuleNotFoundError: No module named 'botcity'
 
 This means that you are likely using a different Python interpreter than the one used to install the bot.
 To fix this, you can either:
-- Use the same interpreter as your IDE and install your bot with `pip install -e .`
-- Use the same interpreter as the one used to install the bot (`pip install -e .`)
+- Use the same interpreter as your IDE and install your bot with `pip install --upgrade -r requirements.txt`
+- Use the same interpreter as the one used to install the bot (`pip install --upgrade -r requirements.txt`)
 
 Please refer to the documentation for more information at https://documentation.botcity.dev/
 """
