@@ -20,6 +20,17 @@ To fix this, you can either:
 Please refer to the documentation for more information at https://documentation.botcity.dev/
 """
 
+"""
+********************************************************************************
+*                                   WARNING                                    *
+********************************************************************************
+
+You are using an outdated version of the template which is no longer recommended.
+While this template works and is valid, it is strongly recommended to create a new project with the latest template version.
+
+Please refer to our documentation: https://documentation.botcity.dev/tutorials/python-automations/desktop/
+"""
+
 from botcity.web import WebBot, Browser
 from botcity.core import DesktopBot
 # Uncomment the line below for integrations with BotMaestro
