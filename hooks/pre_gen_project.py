@@ -1,6 +1,7 @@
 import re
 import sys
 
+
 bot_id = '{{ cookiecutter.bot_id }}'
 
 pattern = re.compile("^[a-z|A-Z]+[a-z|A-Z|_]*[a-z|A-Z]$")
