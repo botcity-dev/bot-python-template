@@ -21,7 +21,7 @@
 
 # Getting Started
 
-This repository contains a cookiecutter template for generating a Bot using 
+This repository contains a cookiecutter template for generating a Bot using
 BotCity's Python Framework.
 
 To create a templated project all you need to do is:
