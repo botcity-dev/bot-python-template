@@ -67,18 +67,22 @@ class Bot(WebBot):
         # Opens the BotCity website.
         self.browse("https://www.botcity.dev")
 
-        # Uncomment to mark this task as finished on BotMaestro
-        # self.maestro.finish_task(
-        #     task_id=execution.task_id,
-        #     status=AutomationTaskFinishStatus.SUCCESS,
-        #     message="Task Finished OK."
-        # )
-
         # Wait for 10 seconds before closing
         self.wait(10000)
 
         # Stop the browser and clean up
         self.stop_browser()
+
+        # Uncomment to mark this task as finished on BotMaestro
+        # self.maestro.finish_task(
+        #     task_id=execution.task_id,
+        #     status=AutomationTaskFinishStatus.SUCCESS,
+        #     message="Task Finished OK.",
+        #     total_items=0,
+        #     processed_items=0,
+        #     failed_items=0
+        # )
+
 
     def not_found(self, label):
         print(f"Element not found: {label}")

@@ -53,7 +53,10 @@ class Bot(BaseBot):
         # self.maestro.finish_task(
         #     task_id=execution.task_id,
         #     status=AutomationTaskFinishStatus.SUCCESS,
-        #     message="Task Finished OK."
+        #     message="Task Finished OK.",
+        #     total_items=0,
+        #     processed_items=0,
+        #     failed_items=0
         # )
 
 
